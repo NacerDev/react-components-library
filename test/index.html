@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React and Webpack4</title>
+  <script type="text/javascript" src="http://127.0.0.1:8000/ryde.min.js"></script>
+</head>
+
+<body>
+  <div id="index">
+
+  </div>
+  <div id="dpz">
+
+  </div>
+  <script>
+    NS = RYDE.default;
+    NS.config({
+      locale: "en_US",
+      environment: "dev"
+    });
+    NS.widgets.navbar.then((md) => {
+      NV = md.default;
+      var myWidget = NV.new({
+        selector: "#index"
+      });
+      myWidget.render({
+        arg: "00001"
+      });
+    }).catch((err) => { console.log(err) })
+    setTimeout(() => {
+      NS.widgets.dropzone.then((md) => {
+        NV = md.default;
+        var myWidget = NV.new({
+          selector: "#dpz"
+        });
+        myWidget.render({
+          config: {
+            showFiletypeIcon: false,
+            postUrl: "/"
+          }
+        });
+      }).catch((err) => { console.log(err) })
+    }, 5000);
+  </script>
+</body>
+
+</html>

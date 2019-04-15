@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React and Webpack4</title>
+</head>
+
+<body>
+  <div id="index"></div>
+  <div class="row mt-2">
+    <div id="dpz" class="col-md-6 m-auto"></div>
+  </div>
+  <script>
+    document.addEventListener("readystatechange", () => {
+      NS = RYDE.default;
+      NS.config({
+        locale: "en_US",
+        environment: "dev"
+      });
+      NS.widgets.navbar.then((md) => {
+        NV = md.default;
+        var myWidget = NV.new({
+          selector: "#index"
+        });
+        myWidget.render({
+          arg: "00001"
+        });
+      }).catch((err) => { console.log(err) })
+    })
+  </script>
+</body>
+
+</html>

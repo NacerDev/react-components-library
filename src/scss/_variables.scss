@@ -1,0 +1,29 @@
+/* ***************************** */
+// KodakOne
+/* Bootstrap overrides
+/* ***************************** */
+
+//Color system
+$black: #000000 !default;
+$white: #ffffff !default;
+$yellow: #ffb700 !default;
+$red: #ed0000 !default;
+$turquoise: #008995 !default;
+$green: #39b54a !default;
+$gray: #4b4f4f !default;
+$dark-gray: #2d2f2f !default;
+$light-gray: #7a7f80 !default;
+
+$info: $turquoise !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$dark: $dark-gray !default;
+$light: $light-gray !default;
+$primary: $turquoise !default;
+$secondary: $white !default;
+$colors: (black: $black, turquoise: $turquoise, dark-gray: $dark-gray, light-gray: $light-gray);
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1600px) !default;
+$btn-border-radius: 0 !default;
